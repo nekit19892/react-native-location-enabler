@@ -46,7 +46,9 @@ LocationEnabler.useLocationSettings = (
 
   useEffect(() => {
     const listner = callback();
-    return () => listner?.remove();
+    if(listener && listener.remove){
+      return () => listner.remove();
+    }
   }, [callback]);
 
   const requestResolutionSettings = useCallback(
