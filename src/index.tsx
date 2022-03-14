@@ -50,7 +50,7 @@ LocationEnabler.useLocationSettings = (
       return () => listner.remove();
     }
     else{
-      return null
+      return () => {};
     }
   }, [callback]);
 
