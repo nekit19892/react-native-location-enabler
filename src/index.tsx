@@ -46,7 +46,7 @@ LocationEnabler.useLocationSettings = (
 
   useEffect(() => {
     const listner = callback();
-    if(listener && listener.remove){
+    if(listner && listner.remove){
       return () => listner.remove();
     }
   }, [callback]);
