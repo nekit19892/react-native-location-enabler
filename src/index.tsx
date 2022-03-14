@@ -49,6 +49,9 @@ LocationEnabler.useLocationSettings = (
     if(listner && listner.remove){
       return () => listner.remove();
     }
+    else{
+      return null
+    }
   }, [callback]);
 
   const requestResolutionSettings = useCallback(
